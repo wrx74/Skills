@@ -21,3 +21,15 @@ cp -r Skills/jev-claude-codex ~/.claude/skills/
 ```
 
 For Codex, point `AGENTS.md` at `jev-claude-codex/SKILL.md` or copy the relevant sections into it.
+
+## youtube-all-in-one
+
+Turns YouTube videos into notes in [wrx74/all_in_one](https://github.com/wrx74/all_in_one), on request.
+
+- Takes links, or a topic (then searches and asks you to confirm the list)
+- Transcribes with `scripts/youtube_to_notes.py --push`
+- Fills each note's empty `## Summary`: the gist, key facts, what to do, links
+- Replies with a short digest across all videos
+- Optional: a Jev triage per video, ✅ worth a closer look or ⏭ skip, with the probability (needs `TYPESAFE_API_KEY` or `OPENROUTER_API_KEY`)
+
+Install: `cp -r Skills/youtube-all-in-one ~/.claude/skills/`. For Codex, use `~/.codex/skills/`.
